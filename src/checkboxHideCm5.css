@@ -1,0 +1,55 @@
+.chx-cm5-widget {
+  display: flex;
+  /* CodeMirror 5's line padding, so the toolbar lines up with the bullet. */
+  padding: 3px 0 3px 4px;
+}
+
+.chx-cm5-indent {
+  white-space: pre;
+}
+
+.chx-cm5-toolbar {
+  align-items: stretch;
+  background: var(--joplin-background-color);
+  border: 1px solid var(--joplin-divider-color);
+  border-radius: 4px;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.chx-cm5-toggle,
+.chx-cm5-copy {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--joplin-color);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 0.85em;
+  line-height: 1.4;
+  padding: 5px 10px;
+}
+
+.chx-cm5-toggle {
+  gap: 10px;
+}
+
+.chx-cm5-toggle:hover,
+.chx-cm5-copy:hover {
+  background: var(--joplin-background-color2);
+}
+
+.chx-cm5-count {
+  border-left: 1px solid var(--joplin-divider-color);
+  font-variant-numeric: tabular-nums;
+  padding-left: 10px;
+}
+
+.chx-cm5-copy {
+  border-left: 1px solid var(--joplin-divider-color);
+}
+
+.chx-cm5-done-hidden {
+  display: none !important;
+}

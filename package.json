@@ -1,0 +1,57 @@
+{
+  "name": "joplin-plugin-checkbox-toggle",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "teawithfruit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teawithfruit/joplin-plugin-checkbox-toggle.git"
+  },
+  "scripts": {
+    "dist": "webpack --env joplin-plugin-config=buildMain && webpack --env joplin-plugin-config=buildExtraScripts && webpack --env joplin-plugin-config=createArchive",
+    "prepare": "npm run dist",
+    "updateVersion": "webpack --env joplin-plugin-config=updateVersion",
+    "update": "npm install -g generator-joplin && yo joplin --node-package-manager npm --update --force",
+    "lint": "eslint src tests browser-tests playwright.config.ts",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "release": "npm run dist && npm stage publish --access public",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:browser": "playwright test"
+  },
+  "license": "MIT",
+  "keywords": [
+    "joplin-plugin"
+  ],
+  "files": [
+    "publish"
+  ],
+  "devDependencies": {
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.14",
+    "@eslint/js": "10.0.1",
+    "@joplin/turndown": "4.0.86",
+    "@joplin/turndown-plugin-gfm": "1.0.68",
+    "@playwright/test": "1.64.0",
+    "@types/jsdom": "30.0.0",
+    "@types/markdown-it": "14.2.0",
+    "@types/node": "24.19.1",
+    "chalk": "6.0.1",
+    "copy-webpack-plugin": "14.0.0",
+    "eslint": "10.12.0",
+    "fs-extra": "11.4.1",
+    "glob": "13.0.6",
+    "globals": "17.13.0",
+    "jsdom": "30.1.2",
+    "markdown-it": "15.0.2",
+    "prettier": "3.9.9",
+    "tar": "7.5.22",
+    "tinymce": "8.9.3",
+    "ts-loader": "9.6.2",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1",
+    "webpack": "5.111.1",
+    "webpack-cli": "7.2.3"
+  }
+}

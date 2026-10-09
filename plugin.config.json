@@ -1,0 +1,8 @@
+{
+  "extraScripts": [
+    "checkboxRenderer.ts",
+    "checkboxRendererBrowser.ts",
+    "contentScript.ts",
+    "contentScriptCm5.ts"
+  ]
+}

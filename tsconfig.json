@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "rootDir": ".",
+    "target": "es2015",
+    "lib": ["es2022", "dom"],
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "rewriteRelativeImportExtensions": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "paths": {
+      "api": ["./api/index.ts"],
+      "api/*": ["./api/*"]
+    }
+  },
+  "include": ["src", "tests", "browser-tests", "playwright.config.ts"]
+}

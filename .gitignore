@@ -1,0 +1,10 @@
+dist/
+node_modules/
+publish/
+.scratch/
+.DS_Store
+
+# Browser test bundles and reports
+browser-tests/.build/
+test-results/
+playwright-report/

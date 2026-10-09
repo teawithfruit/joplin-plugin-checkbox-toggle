@@ -1,0 +1,12 @@
+{
+  // Everything except the plugin entry (src/index.ts), which pulls in the
+  // generator-owned api/ folder (enums, non-type-only imports). These files
+  // run unbundled under Node's type stripping, so they must be erasable.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": ["src", "tests"],
+  "exclude": ["src/index.ts"]
+}
